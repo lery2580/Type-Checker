@@ -71,3 +71,7 @@ input[type="text"]{
     font-family: "Faune";
     font-size: 16px;
 }
+
+section.output{
+    font-size: 64px;
+}
