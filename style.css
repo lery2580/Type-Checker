@@ -75,3 +75,13 @@ input[type="text"]{
 section.output{
     font-size: 64px;
 }
+
+textarea.output {
+    font-size: 64px;
+    width: 100%;
+    background: none;
+    color: #fff;
+    border: none;
+    outline: none;
+    min-height: 100vh;
+}
