@@ -22,7 +22,7 @@ body{
     font-family: "Faune";
     font-size: 16px;
     line-height: 1.5;
-
+   
     background-color:  #2a2a2a;
     color: #fff;
     margin: 0 0 0 280px;
@@ -61,6 +61,11 @@ label{
     display: block;
 }
 
+label span {
+    float: right;
+    font-style:italic;
+}
+
 input[type="text"]{
     width: 100%;
     background-color: #575757;
@@ -70,6 +75,10 @@ input[type="text"]{
     box-sizing:border-box;
     font-family: "Faune";
     font-size: 16px;
+}
+
+input[type="range"]{
+    width: 100%;
 }
 
 section.output{
@@ -85,3 +94,4 @@ textarea.output {
     outline: none;
     min-height: 100vh;
 }
+
