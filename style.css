@@ -1,21 +1,21 @@
 @font-face {
     font-family: "Faune";
     font-weight: 400;
-    src: url(faune-regular.woff2), url(faune-regular.woff2);
+    src: url(faune-regular.woff);
 }
 
 @font-face {
     font-family: "Faune";
     font-weight: 400;
     font-style: italic;
-    src: url(faune-regular.woff2), url(faune-regular.woff2);
+    src: url(faune-italic.woff),
 }
 
 @font-face {
     font-family: "Faune";
     font-weight: 700;
     font-style: bold;
-    src: url(faune-regular.woff2), url(faune-regular.woff2);
+    src: url(faune-bold.woff);
 }
 
 body{
@@ -93,5 +93,11 @@ textarea.output {
     border: none;
     outline: none;
     min-height: 100vh;
+    font-family: "Faune";
 }
 
+div.option-checkbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
