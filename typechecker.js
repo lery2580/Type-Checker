@@ -4,9 +4,11 @@ const typesizeTag = document.querySelector('input[name="typesize"]')
 
 const typesizeOutput = document.querySelector("span.typesize-output")
 
-const lineheightTag = document.querySelector('input[name="Lineheight"]')
+const lineheightTag = document.querySelector('input[name="lineheight"]')
 
 const italicTag = document.querySelector('input[name="italic"]')
+
+const typefaceTag = document.querySelector('select[name="typeface"]')
 
 const lineheightOutput = document.querySelector("span.lineheight-output")
 
@@ -52,4 +54,10 @@ italicTag.addEventListener("change", function(){
     } else {
         outputTag.style.fontStyle = "normal"
     }
+})
+
+// when i change my select for typeface, update the font family
+
+typefaceTag.addEventListener("input", function(){
+    outputTag.style.fontFamily = this.value
 })
