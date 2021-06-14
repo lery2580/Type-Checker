@@ -4,6 +4,10 @@ const typesizeTag = document.querySelector('input[name="typesize"]')
 
 const typesizeOutput = document.querySelector("span.typesize-output")
 
+const fontweightTag = document.querySelector('input[name="fontweight"]')
+
+const fontweightOutput = document.querySelector("span.fontweight-output")
+
 const lineheightTag = document.querySelector('input[name="lineheight"]')
 
 const italicTag = document.querySelector('input[name="italic"]')
@@ -11,6 +15,8 @@ const italicTag = document.querySelector('input[name="italic"]')
 const typefaceTag = document.querySelector('select[name="typeface"]')
 
 const lineheightOutput = document.querySelector("span.lineheight-output")
+
+const colorTags = document.querySelectorAll("div.colors div")
 
 const outputTag = document.querySelector("textarea.output")
 
@@ -39,6 +45,11 @@ typesizeTag.addEventListener("input", function(){
     typesizeOutput.innerHTML = this.value + "px"
 })
 
+fontweightTag.addEventListener("input", function(){
+    outputTag.style.fontWeight = this.value 
+    fontweightOutput.innerHTML = this.value 
+})
+
 
 lineheightTag.addEventListener("input", function(){
     outputTag.style.lineHeight = this.value 
@@ -60,4 +71,22 @@ italicTag.addEventListener("change", function(){
 
 typefaceTag.addEventListener("input", function(){
     outputTag.style.fontFamily = this.value
+})
+
+// go through all of my color tags, then 
+// when i click one of them, change the background color and the text color,and make this tag be selected
+
+colorTags.forEach(tag => {
+
+    tag.addEventListener("click", function(){
+        outputTag.style.backgroundColor = this.style.backgroundColor
+        outputTag.style.color = this.style.color
+
+        // reset the classes
+        colorTags.forEach(tag => {
+            tag.classList.remove("selected")
+        })
+
+        this.classList.add("selected")
+    })
 })
